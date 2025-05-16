@@ -1,12 +1,9 @@
-
 import { Header } from "@/components/Header";
 import { ProblemCard } from "@/components/ProblemCard";
 import { problemStatements } from "@/data/problemStatements";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
+  return <div className="min-h-screen bg-background flex flex-col">
       <Header />
       
       <main className="flex-1">
@@ -19,9 +16,7 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in">
               Applied Generative AI Cohort Problem Statements
             </p>
-            <Button className="animate-fade-in" size="lg">
-              Start Building
-            </Button>
+            <Button className="animate-fade-in" size="lg">Select your Project</Button>
           </div>
         </section>
         
@@ -31,9 +26,7 @@ const Index = () => {
             <h2 className="text-3xl font-bold mb-8 text-center">Problem Statements</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {problemStatements.map((problem) => (
-                <ProblemCard key={problem.id} problem={problem} />
-              ))}
+              {problemStatements.map(problem => <ProblemCard key={problem.id} problem={problem} />)}
             </div>
           </div>
         </section>
@@ -59,8 +52,6 @@ const Index = () => {
           </p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
