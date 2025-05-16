@@ -71,7 +71,7 @@ const Index = () => {
         <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
           <div className="w-full h-[80vh]">
             <iframe 
-              data-tally-src="https://tally.so/r/woQRDb?transparentBackground=1" 
+              data-tally-src="https://tally.so/embed/woQRDb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
               width="100%" 
               height="100%" 
               frameBorder={0}
