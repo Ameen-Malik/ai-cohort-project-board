@@ -1,16 +1,16 @@
 
-import { useState, useEffect } from "react";
+//import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { ProblemCard } from "@/components/ProblemCard";
 import { problemStatements } from "@/data/problemStatements";
 import { Button } from "@/components/ui/button";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+//import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Index = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  //const [isFormOpen, setIsFormOpen] = useState(false);
   
   // Initialize Tally embed script when the dialog is opened
-  useEffect(() => {
+  /*useEffect(() => {
     if (isFormOpen) {
       // Check if Tally script exists
       const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
@@ -28,7 +28,7 @@ const Index = () => {
         }
       }
     }
-  }, [isFormOpen]);
+  }, [isFormOpen]);*/
   
   return <div className="min-h-screen bg-background flex flex-col">
       <Header />
@@ -45,7 +45,11 @@ const Index = () => {
           <Button 
             className="animate-fade-in" 
             size="lg"
-            onClick={() => setIsFormOpen(true)}
+            // REMOVE: onClick={() => setIsFormOpen(true)}
+            // ADD Tally data attributes:
+            data-tally-open="woQRDb"
+            data-tally-emoji-text="👋"
+            data-tally-emoji-animation="wave"
           >
             Select your Project
           </Button>
@@ -87,22 +91,7 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* Tally Form Dialog */}
-      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
-        <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
-          <div className="w-full h-[80vh]">
-            <iframe 
-              data-tally-src="https://tally.so/embed/woQRDb?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" 
-              width="100%" 
-              height="100%" 
-              frameBorder={0}
-              marginHeight={0}
-              marginWidth={0}
-              title="Mini-Capstone Project Selection"
-            ></iframe>
-          </div>
-        </DialogContent>
-      </Dialog>
+            
     </div>;
 };
 
