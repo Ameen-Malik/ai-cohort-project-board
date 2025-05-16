@@ -90,10 +90,6 @@ export const ProblemCard = ({ problem }: ProblemCardProps) => {
                 To submit your idea for the Open Category, please fill out the Tally form. Your idea and draft will be reviewed by our team, and we will inform you if you can proceed to build it.
               </p>
             )}
-            
-            <div className="pt-4">
-              <Button className="w-full">Submit Project</Button>
-            </div>
           </div>
         </DialogContent>
       </Dialog>

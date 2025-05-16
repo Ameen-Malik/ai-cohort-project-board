@@ -1,8 +1,14 @@
+
+import { useState } from "react";
 import { Header } from "@/components/Header";
 import { ProblemCard } from "@/components/ProblemCard";
 import { problemStatements } from "@/data/problemStatements";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+
 const Index = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  
   return <div className="min-h-screen bg-background flex flex-col">
       <Header />
       
@@ -16,7 +22,13 @@ const Index = () => {
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in">
               Applied Generative AI Cohort Problem Statements
             </p>
-            <Button className="animate-fade-in" size="lg">Select your Project</Button>
+            <Button 
+              className="animate-fade-in" 
+              size="lg"
+              onClick={() => setIsFormOpen(true)}
+            >
+              Select your Project
+            </Button>
           </div>
         </section>
         
@@ -38,7 +50,10 @@ const Index = () => {
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
               Choose one of the problem statements above and submit your project for review.
             </p>
-            <Button size="lg">
+            <Button 
+              size="lg"
+              onClick={() => window.open("https://100xengineers.onlineclass.site/student/classes", "_blank")}
+            >
               Submit Your Project
             </Button>
           </div>
@@ -52,6 +67,25 @@ const Index = () => {
           </p>
         </div>
       </footer>
+
+      {/* Tally Form Dialog */}
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <DialogContent className="max-w-4xl max-h-[90vh] p-0 overflow-hidden">
+          <div className="w-full h-[80vh]">
+            <iframe 
+              data-tally-src="https://tally.so/r/woQRDb?transparentBackground=1" 
+              width="100%" 
+              height="100%" 
+              frameBorder="0" 
+              marginHeight="0" 
+              marginWidth="0" 
+              title="Mini-Capstone Project Selection"
+            ></iframe>
+            <script async src="https://tally.so/widgets/embed.js"></script>
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>;
 };
+
 export default Index;
