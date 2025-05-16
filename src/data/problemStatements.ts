@@ -6,9 +6,9 @@ export const problemStatements: ProblemStatement[] = [
     id: 1,
     title: "HireAI: Talent Matchmaking",
     problem: "AI companies and enterprises struggle to fill specialized roles quickly. Scarcity of qualified candidates, manual sourcing, inefficient screening, and bias stretch the average time-to-hire past 60 days and push costs sky-high. An LLM-driven, natural-language search engine that understands skills, projects, and context promises to compress this cycle from weeks to minutes.",
-    solution: "Build an end-to-end hiring copilot that lets recruiters type a plain-English request (e.g., "Find senior Gen-AI engineers with LangChain + RAG experience in Europe, open to contract work") and instantly returns relevant candidates, auto-screens them, and sends personalized outreach.",
+    solution: "Build an end-to-end hiring copilot that lets recruiters type a plain-English request (e.g., 'Find senior Gen-AI engineers with LangChain + RAG experience in Europe, open to contract work') and instantly returns relevant candidates, auto-screens them, and sends personalized outreach.",
     scope: [
-      "Natural-language multi-source talent search ("PeopleGPT")",
+      "Natural-language multi-source talent search ('PeopleGPT')",
       "Auto resume parsing & skill extraction",
       "Talent-pool insights dashboards (charts)",
       "Candidate Ranking: Automatically ranks, scores, and organizes candidate profiles based on recruiter criteria, eliminating manual screening",
@@ -51,7 +51,7 @@ export const problemStatements: ProblemStatement[] = [
       "Résumé / Portfolio Optimizer Real-time score, keyword gap analysis vs. target job description, and auto-rewrite suggestions",
       "AI Mock Interviewer Role-aware question sets (technical, behavioral) with live transcript, confidence metrics, and improvement tips",
       "AI-driven personalized career coaching and skill gap analysis",
-      "Job-Opening Alert Engine Users choose sources (LinkedIn, AngelList, Wellfound, company RSS, etc.), keywords, and frequency; alerts via email & in-app with "Apply-with-Profile" shortcut"
+      "Job-Opening Alert Engine Users choose sources (LinkedIn, AngelList, Wellfound, company RSS, etc.), keywords, and frequency; alerts via email & in-app with 'Apply-with-Profile' shortcut"
     ]
   },
   {
@@ -81,7 +81,7 @@ export const problemStatements: ProblemStatement[] = [
       "Solo Challenges Catalogue – Filterable list of companies‑authored & sponsored problems with deadlines, data packs, and evaluation rubrics.",
       "User Onboarding – OAuth sign‑in ➜ connect GitHub/portfolio/CV ➜ suggested first challenge.",
       "Submission Pipeline – Deliverable uploader (repo link, deck, video) → sandboxed automated tests → LLM rubric evaluation → provisional score.",
-      "Hybrid Leaderboards – Real‑time event boards + season‑based cumulative "Career Score."",
+      "Hybrid Leaderboards – Real‑time event boards + season‑based cumulative 'Career Score.'",
       "Badging & Recognition – Auto‑awarded badges (Top‑10 %, Category Winner, Sponsor Favorite) post‑review.",
       "Sponsor Dashboard – Create/manage challenges, fund prizes, view ranked submissions, download candidate packets.",
       "Notification System – Email alerts for submission status, score updates, and badge drops."
