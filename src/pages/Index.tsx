@@ -1,5 +1,5 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { ProblemCard } from "@/components/ProblemCard";
 import { problemStatements } from "@/data/problemStatements";
@@ -8,6 +8,27 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Index = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
+  
+  // Initialize Tally embed script when the dialog is opened
+  useEffect(() => {
+    if (isFormOpen) {
+      // Check if Tally script exists
+      const existingScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]');
+      if (!existingScript) {
+        const script = document.createElement('script');
+        script.src = "https://tally.so/widgets/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+      } else {
+        // If script exists, trigger Tally to load the form
+        // @ts-ignore
+        if (window.Tally && typeof window.Tally.loadEmbeds === "function") {
+          // @ts-ignore
+          window.Tally.loadEmbeds();
+        }
+      }
+    }
+  }, [isFormOpen]);
   
   return <div className="min-h-screen bg-background flex flex-col">
       <Header />
@@ -79,7 +100,6 @@ const Index = () => {
               marginWidth={0}
               title="Mini-Capstone Project Selection"
             ></iframe>
-            <script async src="https://tally.so/widgets/embed.js"></script>
           </div>
         </DialogContent>
       </Dialog>
