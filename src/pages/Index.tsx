@@ -70,9 +70,10 @@ const Index = () => {
       {/* Call To Action */}
       <section className="py-16 bg-gradient-to-b from-background to-primary/10">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Build?</h2>
+          <h2 className="text-3xl font-bold mb-4">Ready with your Project</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Choose one of the problem statements above and submit your project for review.
+            {/* Choose one of the problem statements above and submit your project for review. */}
+            Go ahead and submit your projects for review. Make sure to keep your repos 'Public' if you're using AI dev tools like lovable!!
           </p>
           <Button 
             className="animate-fade-in" 
