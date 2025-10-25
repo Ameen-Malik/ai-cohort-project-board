@@ -64,11 +64,8 @@ const Index = () => {
           {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {problemStatements.map(problem => <ProblemCard key={problem.id} problem={problem} />)}
           </div> */}
-          {/* <div className="flex flex-wrap gap-6 justify-center">
+          <div className="flex flex-wrap gap-6 justify-center">
             {problemStatements.map((problem) => (<ProblemCard key={problem.id} problem={problem} />))}
-          </div> */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
-            {problemStatements.map((problem, index) => (<ProblemCard key={problem.id} problem={problem} />))}
           </div>
         </div>
       </section>
