@@ -75,11 +75,22 @@ const Index = () => {
             Choose one of the problem statements above and submit your project for review.
           </p>
           <Button 
+            className="animate-fade-in" 
+            size="lg"
+            // REMOVE: onClick={() => setIsFormOpen(true)}
+            // ADD Tally data attributes:
+            data-tally-open="w56zvZ"
+            data-tally-emoji-text="🚀"
+            data-tally-emoji-animation="wave"
+          >
+            Submit your Project
+          </Button>
+          {/* <Button 
             size="lg"
             onClick={() => window.open("https://100xengineers.onlineclass.site/student/classes", "_blank")}
           >
             Submit Your Project
-          </Button>
+          </Button> */}
         </div>
       </section>
       
