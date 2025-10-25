@@ -110,7 +110,11 @@
   display: flex;
   flex-direction: column;
 }
-
+/* Center the last item if it's the only one in the last row */
+.grid > :nth-child(3n+1):last-child {
+  grid-column: span 3;  /* Span all columns */
+  justify-self: center; /* Center the last card */
+}
 .problem-card-content {
   flex-grow: 1;
 }
