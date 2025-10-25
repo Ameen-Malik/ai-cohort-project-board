@@ -47,7 +47,7 @@ const Index = () => {
             size="lg"
             // REMOVE: onClick={() => setIsFormOpen(true)}
             // ADD Tally data attributes:
-            data-tally-open="woQRDb"
+            data-tally-open="n02xvB"
             data-tally-emoji-text="👋"
             data-tally-emoji-animation="wave"
           >
