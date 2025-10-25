@@ -37,7 +37,7 @@ const Index = () => {
       <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">
-            Mini-Capstone Project
+            Mini-Hackathon
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8 animate-fade-in">
             Applied Generative AI Cohort Problem Statements
