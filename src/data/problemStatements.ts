@@ -86,7 +86,7 @@ export const problemStatements: ProblemStatement[] = [
       "Sponsor Dashboard – Create/manage challenges, fund prizes, view ranked submissions, download candidate packets.",
       "Notification System – Email alerts for submission status, score updates, and badge drops."
     ]
-  },
+  }
   // {
   //   id: 5,
   //   title: "Open Category",
