@@ -61,9 +61,15 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8 text-center">Problem Statements</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {problemStatements.map(problem => <ProblemCard key={problem.id} problem={problem} />)}
+          </div> */}
+          <div className="flex flex-wrap gap-6 justify-center">
+            {problemStatements.map((problem) => (<ProblemCard key={problem.id} problem={problem} />))}
           </div>
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+            {problemStatements.map((problem, index) => (<ProblemCard key={problem.id} problem={problem} />))}
+          </div> */}
         </div>
       </section>
       
